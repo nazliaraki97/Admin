@@ -4,12 +4,12 @@ import javafx.beans.property.SimpleStringProperty;
 
 public  class Employee {
 
-    private final SimpleStringProperty id;
+    private  SimpleStringProperty id;
     private final SimpleStringProperty firstName;
-    private final SimpleStringProperty lastName;
-    private final SimpleStringProperty userName;
-    private final SimpleStringProperty jobTitle;
-    private final SimpleStringProperty password;
+    private  SimpleStringProperty lastName;
+    private  SimpleStringProperty userName;
+    private  SimpleStringProperty jobTitle;
+    private  SimpleStringProperty password;
 
     public Employee(String i, String fName, String lName, String us, String jt,String p) {
         this.id = new SimpleStringProperty(i);
@@ -18,6 +18,10 @@ public  class Employee {
         this.userName = new SimpleStringProperty(us);
         this.jobTitle = new SimpleStringProperty(jt);
         this.password = new SimpleStringProperty(p);
+    }
+    public Employee(String fName) {
+        this.firstName = new SimpleStringProperty(fName);
+
     }
 
     public String getFirstName() {
@@ -63,7 +67,6 @@ public  class Employee {
     public String getPassword() {
         return password.get();
     }
-
     public void setPassword(String jo) {
         password.set(jo);
     }

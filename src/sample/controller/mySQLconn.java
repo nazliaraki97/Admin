@@ -2,6 +2,7 @@ package sample.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import sample.model.Employee;
+import sample.model.equipment;
 
 import java.sql.*;
 
@@ -20,7 +21,33 @@ class mySQLconn{
                 System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
 
              */
+            con.close();
 
+        }catch(Exception e){ System.out.println(e);}
+    }
+    public static void doInserte(String p,String ee,String c,String m,String l,String d){
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/checkingdb","root","");
+            //here sonoo is database name, root is username and password
+            Statement stmt=con.createStatement();
+
+            int rs=stmt.executeUpdate("insert into equipments values (\""+ p +"\",\""+ee+"\",\""+c+"\",\""+m+"\",\""+l+"\",\""+d+"\",null) ;");
+            con.close();
+
+        }catch(Exception e){ System.out.println(e);}
+    }
+
+    public static void doInsertee(String c,String p,String i,String j,String o){
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/checkingdb","root","");
+            //here sonoo is database name, root is username and password
+            Statement stmt=con.createStatement();
+
+            int rs=stmt.executeUpdate("insert into companies values (\""+ c +"\",\""+p+"\",\""+i+"\",\""+j+"\",\""+o+"\",null) ;");
 
             con.close();
 
@@ -29,12 +56,10 @@ class mySQLconn{
 
     public static ObservableList<Employee> doSelect(){
         ObservableList<Employee> data =
-
                 FXCollections.observableArrayList(
                 //        new Employee("1", "Smith", "jacob","smith@example.com","admin"),
                //         new Employee("2","Isabella", "Johnson", "isabella.johnson@example.com","emp","111")
                 );
-
         try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=DriverManager.getConnection(
@@ -64,6 +89,62 @@ class mySQLconn{
     }
 
 
+
+    public static ObservableList<equipment> doSelecte(){
+        ObservableList<equipment> data =
+                FXCollections.observableArrayList(
+                        //        new Employee("1", "Smith", "jacob","smith@example.com","admin"),
+                        //         new Employee("2","Isabella", "Johnson", "isabella.johnson@example.com","emp","111")
+                );
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/checkingdb","root","");
+            //here sonoo is database name, root is username and password
+            Statement stmt=con.createStatement();
+
+            ResultSet rs=stmt.executeQuery("SELECT Pole_Distance,Eq_name,Carrier_Medium,Mag_Tech,Light_Intensity,DistanceofLight,id from equipments ;");
+
+
+            while(rs.next()){
+                data.add(new equipment(rs.getString("Pole_Distance") , rs.getString("Eq_name") , rs.getString("Carrier_Medium") , rs.getString("Mag_Tech") , rs.getString("Light_Intensity") , rs.getString("DistanceofLight"),rs.getInt("id")) ) ;
+            }
+            System.out.println(rs.getString(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
+            con.close();
+        }catch(Exception e){ System.out.println(e);}
+        return data ;
+    }
+
+    public static ObservableList<Employee> doSelectfir(){
+        ObservableList<Employee> data =
+
+                FXCollections.observableArrayList(
+                        //        new Employee("1", "Smith", "jacob","smith@example.com","admin"),
+                        //         new Employee("2","Isabella", "Johnson", "isabella.johnson@example.com","emp","111")
+                );
+
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/checkingdb","root","");
+            //here sonoo is database name, root is username and password
+            Statement stmt=con.createStatement();
+
+            ResultSet rs=stmt.executeQuery("SELECT firstname from employees ;");
+
+
+            while(rs.next()){
+                data.add(new Employee(rs.getString("firstname") ) ) ;
+            }
+            System.out.println(rs.getInt(2)+"  ");
+
+            con.close();
+
+        }catch(Exception e){ System.out.println(e);}
+        return data ;
+
+    }
+
     public static void doDelete(String id) {
         try{
             Class.forName("com.mysql.jdbc.Driver");
@@ -74,15 +155,7 @@ class mySQLconn{
 
             System.out.println("DELETE FROM employees WHERE id=" + id + " ;");
             int rs=stmt.executeUpdate("DELETE FROM employees WHERE id=" + id + " ;")  ;
-            /*
-            while(rs.next())
-                System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
-
-             */
-
-
             con.close();
-
         }catch(Exception e){ System.out.println(e);}
     }
 
@@ -96,12 +169,6 @@ class mySQLconn{
 
             System.out.println("UPDATE employees SET firstname = "+ fn + " , lastname = " + ln + " , password = " + ps + " ,username =  " + un + " , jobtitle = " + jt + " WHERE id = " +  id + "; ");
             int rs=stmt.executeUpdate("UPDATE employees SET firstname = \""+ fn + "\" , lastname = \"" + ln + "\" , password = \"" + ps + "\" ,username =  \"" + un + "\" , jobtitle = \"" + jt + "\" WHERE id = " +  id + "; ")  ;
-            /*
-            while(rs.next())
-                System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
-
-             */
-
 
             con.close();
 

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1374.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CreatReport">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1363.0" prefWidth="888.0">
+         <children>
+            <Text layoutX="8.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="müşteri&#10;customer">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke></Text>
+            <Text layoutX="8.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="proje adı&#10;project name" />
+            <Text layoutX="8.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="test yeri&#10;inspection place" />
+            <Text layoutX="6.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="muayene standardı&#10;inspection standart" />
+            <Text layoutX="8.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="değerlen. standardı&#10;evaluation standart" />
+            <Text layoutX="295.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yüzey Durumu &#10;Surface Condition" />
+            <Text layoutX="295.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muayene Prosedürü&#10;Inspection Procedure" />
+            <Text layoutX="295.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muayene Kapsamı &#10;Inspection Scope " />
+            <Text layoutX="295.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resim No&#10;Drawing No " />
+            <Text layoutX="295.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muayene Aşaması&#10;Stage Of Examination" />
+            <Text layoutX="585.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sayfa No&#10;Page " />
+            <Text layoutX="585.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rapor No&#10;Report No" />
+            <Text layoutX="585.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rapor Tarihi &#10;Report Date" />
+            <Text layoutX="585.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" İş Emri No &#10;Job Order No" />
+            <Text layoutX="585.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teklif No &#10;Offer No" />
+            <Text fill="RED" layoutX="324.0" layoutY="33.0" smooth="false" stroke="RED" strokeType="OUTSIDE" strokeWidth="0.0" text=" GÖZETİM MUAYENE VE EĞİTİM HİZMETLERİ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="331.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANYETİK PARÇACIK MUAYENE RAPORU&#10;MAGNETIC PARTICLE INSPECTION REPORT" textAlignment="CENTER" wrappingWidth="364.9306640625">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Line endX="722.5" layoutX="172.0" layoutY="94.0" startX="-179.0" AnchorPane.bottomAnchor="513.5" AnchorPane.leftAnchor="-7.5" AnchorPane.rightAnchor="-12.5" AnchorPane.topAnchor="93.5" />
+            <Line endX="722.5" layoutX="172.0" layoutY="138.0" startX="-179.0" />
+            <Line endX="722.0" layoutX="172.0" layoutY="182.0" startX="-179.0" />
+            <Line endX="723.0" layoutX="172.0" layoutY="230.0" startX="-179.0" />
+            <Line endX="722.5" layoutX="172.0" layoutY="278.0" startX="-179.0" />
+            <Line endX="715.5" layoutX="179.0" layoutY="324.0" startX="-179.0" />
+            <Line endX="-22.0" endY="-25.5" layoutX="142.0" layoutY="350.0" startX="-22.0" startY="-255.5" />
+            <TextField fx:id="TestyeriTxtId" alignment="TOP_CENTER" layoutX="128.0" layoutY="196.0" />
+            <TextField fx:id="MuayenestandardiTxtId" alignment="TOP_CENTER" layoutX="128.0" layoutY="243.0" text="TS EN ISO 17638" />
+            <TextField fx:id="DegerlenstandardiTxtId" alignment="TOP_CENTER" layoutX="128.0" layoutY="289.0" text="TS EN ISO 23278 Class B" />
+            <Line endX="-22.0" endY="-25.5" layoutX="308.0" layoutY="350.0" startX="-22.0" startY="-255.5" />
+            <Line endX="-22.0" endY="-25.5" layoutX="435.0" layoutY="350.0" startX="-22.0" startY="-255.5" />
+            <Line endX="558.5" endY="-297.0" layoutX="336.0" layoutY="342.0" startX="-102.0" startY="-297.0" />
+            <Line endX="-98.0" endY="-361.0" layoutX="331.0" layoutY="360.0" startX="-98.0" startY="-267.0" />
+            <TextField fx:id="MuayeneproseduruTxtId" alignment="TOP_CENTER" layoutX="422.0" layoutY="104.0" text="P-101-004" />
+            <TextField fx:id="MuayenekapsamiTxtId" alignment="TOP_CENTER" layoutX="422.0" layoutY="148.0" text="100%" />
+            <TextField fx:id="ResimnoTxtId" alignment="TOP_CENTER" layoutX="422.0" layoutY="195.0" text="-" />
+            <TextField fx:id="yuzeydurumuTxtId" alignment="TOP_CENTER" layoutX="422.0" layoutY="242.0" />
+            <Line endX="-22.0" endY="-25.5" layoutX="602.0" layoutY="350.0" startX="-22.0" startY="-255.5" />
+            <Line endX="-22.0" endY="-25.5" layoutX="743.0" layoutY="350.0" startX="-22.0" startY="-255.5" />
+            <TextField fx:id="pageTxtId" alignment="TOP_CENTER" layoutX="728.0" layoutY="101.0" text="1" />
+            <TextField fx:id="rapornoTxtId" layoutX="728.0" layoutY="145.0" />
+            <TextField fx:id="joboderTxtId" alignment="TOP_CENTER" layoutX="728.0" layoutY="239.0" />
+            <TextField fx:id="offernoTxtId" alignment="TOP_CENTER" layoutX="728.0" layoutY="288.0" />
+            <Text layoutX="297.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ekipman Bilgileri/ Equipment Informations">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="9.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kutup Mesafesi,mm&#10;Pole Distance">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Text>
+            <Text layoutX="9.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cihaz&#10;Equipment" />
+            <Text layoutX="9.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MP Taşıyıcı Ortam&#10;MP Carrier Medium" />
+            <Text layoutX="7.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mıknatıslama Tekniği&#10;Mag.Tech." />
+            <Text layoutX="9.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UV Işık Şiddeti&#10;UV Light Intensity" />
+            <Text layoutX="296.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muayene Ortamı&#10;Test Medium" />
+            <Text layoutX="296.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muayene Bölgesi &#10;Examination Area" />
+            <Text layoutX="296.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Akım Tipi&#10;Current Type" />
+            <Text layoutX="296.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Luxmetre/Işık Şiddeti&#10;Luxmeter" />
+            <Text layoutX="296.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mıknatıs Giderimi&#10;Demagnetization" />
+            <Line endX="720.5" layoutX="173.0" layoutY="348.0" startX="-179.0" />
+            <Line endX="721.5" layoutX="173.0" layoutY="392.0" startX="-179.0" />
+            <Line endX="406.5" layoutX="173.0" layoutY="436.0" startX="-179.0" />
+            <Line endX="720.0" layoutX="173.0" layoutY="484.0" startX="-179.0" />
+            <Line endX="720.5" layoutX="173.0" layoutY="532.0" startX="-179.0" />
+            <Line endX="713.5" endY="0.5" layoutX="180.0" layoutY="629.0" startX="-179.0" />
+            <TextField fx:id="MusteriTxtId1" alignment="TOP_CENTER" layoutX="129.0" layoutY="359.0" />
+            <TextField fx:id="ProjeadiTxtId1" alignment="TOP_CENTER" layoutX="129.0" layoutY="403.0" />
+            <TextField fx:id="TestyeriTxtId1" alignment="TOP_CENTER" layoutX="129.0" layoutY="450.0" />
+            <TextField fx:id="MuayenestandardiTxtId1" alignment="TOP_CENTER" layoutX="129.0" layoutY="497.0" />
+            <TextField fx:id="DegerlenstandardiTxtId1" alignment="TOP_CENTER" layoutX="129.0" layoutY="543.0" />
+            <Line endX="-22.0" endY="25.5" layoutX="435.0" layoutY="604.0" startX="-22.0" startY="-255.5" />
+            <TextField fx:id="MuayeneproseduruTxtId1" alignment="TOP_CENTER" layoutX="422.0" layoutY="358.0" text="KAYNAK+HAZ" />
+            <TextField fx:id="ResimnoTxtId1" alignment="TOP_CENTER" layoutX="422.0" layoutY="449.0" text="1200 Lux" />
+            <TextField fx:id="yuzeydurumuTxtId1" alignment="TOP_CENTER" layoutX="422.0" layoutY="496.0" />
+            <TextField fx:id="MuayeneasamasiTxtId1" alignment="TOP_CENTER" layoutX="422.0" layoutY="545.0" />
+            <Line endX="-22.0" endY="24.29290771484375" layoutX="143.0" layoutY="604.0" startX="-22.0" startY="-255.5" />
+            <Line endX="-22.0" endY="25.5" layoutX="307.0" layoutY="604.0" startX="-22.0" startY="-255.5" />
+            <Text layoutX="8.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Işık mesafesi&#10;Distance of Light" />
+            <Text layoutX="295.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Isıl İşlem&#10;Heat Treatment" />
+            <TextField fx:id="DegerlenstandardiTxtId11" alignment="TOP_CENTER" layoutX="129.0" layoutY="584.0" />
+            <TextField fx:id="MuayeneasamasiTxtId11" alignment="TOP_CENTER" layoutX="422.0" layoutY="586.0" />
+            <Line endX="714.0" layoutX="179.0" layoutY="579.0" startX="-179.0" />
+            <Text layoutX="585.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yüzey&#10;Surface Condition" />
+            <Text layoutX="585.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yüzey Sıcaklığı (ºC)&#10;Surface Temperature" />
+            <Text layoutX="585.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muayene Bölgesindeki Alan Şiddeti, kA/m&#10;Gauss Field Strength" wrappingWidth="126.65234375" />
+            <Text layoutX="585.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Işık Cihazı Tanımı&#10;Identification of Light Equip." wrappingWidth="132.021484375" />
+            <Line endX="-21.28125" endY="23.93359375" layoutX="743.0" layoutY="604.0" startX="-22.0" startY="-255.5" />
+            <TextField fx:id="MuayeneproseduruTxtId11" alignment="TOP_CENTER" layoutX="728.0" layoutY="358.0" />
+            <TextField fx:id="MuayenekapsamiTxtId11" layoutX="728.0" layoutY="410.0" prefHeight="53.0" prefWidth="149.0" text="3.2 kA/m" />
+            <TextField fx:id="yuzeydurumuTxtId11" alignment="TOP_CENTER" layoutX="728.0" layoutY="496.0" text="TAŞLANMIŞ / GRINDING" />
+            <TextField fx:id="MuayeneasamasiTxtId12" alignment="TOP_CENTER" layoutX="728.0" layoutY="545.0" text="***" />
+            <Line endX="-22.0" endY="24.5" layoutX="602.0" layoutY="604.0" startX="-22.0" startY="-255.5" />
+            <Text layoutX="585.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kaldırma Testi Tarih / No Lifting Test Date / Number" wrappingWidth="133.71875" />
+            <TextField fx:id="MuayeneasamasiTxtId111" alignment="TOP_CENTER" layoutX="728.0" layoutY="589.0" />
+            <Line endX="151.0" endY="744.0" layoutX="743.0" layoutY="614.0" startX="151.0" startY="-629.0" />
+            <ComboBox layoutX="422.0" layoutY="403.0" prefWidth="150.0" />
+            <ComboBox layoutX="128.0" layoutY="104.0" prefWidth="150.0" />
+            <ComboBox layoutX="129.0" layoutY="148.0" prefWidth="150.0" />
+            <Line endX="-22.0" endY="-125.5" layoutX="435.0" layoutY="885.0" startX="-22.0" startY="-255.5" />
+            <Line endX="-22.0" endY="-14.70709228515625" layoutX="236.0" layoutY="885.0" startX="-22.0" startY="-255.5" />
+            <Line endX="261.5" layoutX="632.0" layoutY="657.0" startX="-218.5" />
+            <Text layoutX="541.0" layoutY="649.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Süreksizliğin Yeri / Location of Discontinuity">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Line endX="261.5" layoutX="631.0" layoutY="683.0" startX="-218.5" />
+            <Line endX="261.5" layoutX="631.0" layoutY="708.0" startX="-218.5" />
+            <Line endX="261.5" layoutX="632.0" layoutY="733.0" startX="-218.5" />
+            <Line endX="261.5" layoutX="632.0" layoutY="759.0" startX="-632.0" />
+            <Line endX="-128.0" endY="67.5" layoutX="641.0" layoutY="691.0" startX="-128.0" startY="-34.5" />
+            <ImageView fx:id="imageView" fitHeight="118.0" fitWidth="163.0" layoutX="12.0" layoutY="651.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/6.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageView2" fitHeight="91.0" fitWidth="151.0" layoutX="239.0" layoutY="649.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/66.PNG" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="cb1" layoutX="180.0" layoutY="731.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cb2" layoutX="387.0" layoutY="731.0" mnemonicParsing="false" />
+            <Text layoutX="445.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" BM">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="447.0" layoutY="701.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HAZ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="539.0" layoutY="675.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ana Metal / Base Metal" />
+            <Text layoutX="452.0" layoutY="752.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="449.0" layoutY="727.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="539.0" layoutY="700.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Isıdan etkilenen bölge / Heat afffected zone" />
+            <Text layoutX="539.0" layoutY="725.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kaynak / Weld" />
+            <Text layoutX="539.0" layoutY="751.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kaynak ağzı / Bevel " />
+            <Line endX="713.5" endY="0.5" layoutX="181.0" layoutY="795.0" startX="-182.0" startY="0.5" />
+            <Line endX="713.5" endY="0.5" layoutX="180.0" layoutY="871.0" startX="-179.0" />
+            <Line endX="702.0" endY="0.5" layoutX="192.0" layoutY="834.0" startX="-192.0" startY="0.5" />
+            <Text layoutX="11.0" layoutY="772.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Standarttan Sapmalar&#10;Standard Deviations" wrappingWidth="192.529296875" />
+            <Text layoutX="11.0" layoutY="813.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muayene Tarihleri&#10;Inspection Dates" />
+            <Text layoutX="11.0" layoutY="849.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Açıklamalar ve Ekler&#10;Description and Attachments" />
+            <TextField layoutX="230.0" layoutY="765.0" prefHeight="25.0" prefWidth="653.0" text="Standarttan sapma yoktur." />
+            <TextField layoutX="230.0" layoutY="840.0" prefHeight="25.0" prefWidth="653.0" />
+            <Line endX="713.5" endY="0.5" layoutX="179.0" layoutY="895.0" startX="-179.0" />
+            <Text layoutX="327.0" layoutY="887.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muayene Sonuçları / Inspection Results">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <TableView fx:id="table1" layoutX="-1.0" layoutY="897.0" prefHeight="303.0" prefWidth="892.0" />
+            <Line endX="713.5" endY="0.5" layoutX="179.0" layoutY="1234.0" startX="-179.0" />
+            <Text layoutX="12.0" layoutY="1224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personel Bilgileri/ Person. Infor. " />
+            <Line endX="713.5" endY="0.5" layoutX="180.0" layoutY="1206.0" startX="-179.0" />
+            <Line endX="715.0" layoutX="179.0" layoutY="1263.0" startX="-179.0" />
+            <Line endX="715.0" layoutX="178.0" layoutY="1292.0" startX="-179.0" />
+            <Line endX="716.5" layoutX="178.0" layoutY="1323.0" startX="-179.0" />
+            <Line endX="717.0" layoutX="177.0" layoutY="1358.0" startX="-179.0" />
+            <Text layoutX="12.0" layoutY="1253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adı Soyadı / Name Surname " />
+            <Text layoutX="13.0" layoutY="1279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seviye / Level" />
+            <Text layoutX="11.0" layoutY="1307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarih / Date" />
+            <Text layoutX="13.0" layoutY="1337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="İmza / Signature" />
+            <Line endX="-72.0" endY="91.5" layoutX="266.0" layoutY="1266.0" startX="-72.0" startY="-59.0" />
+            <Line endX="-72.0" endY="91.5" layoutX="425.0" layoutY="1266.0" startX="-72.0" startY="-59.0" />
+            <Line endX="-72.0" endY="91.5" layoutX="596.0" layoutY="1266.0" startX="-72.0" startY="-59.0" />
+            <Line endX="-72.0" endY="92.5" layoutX="769.0" layoutY="1265.0" startX="-72.0" startY="-59.0" />
+            <Text layoutX="225.0" layoutY="1224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operatör/ Operator" />
+            <Text layoutX="367.0" layoutY="1224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Değerlendiren/ Evaluated by " />
+            <Text layoutX="554.0" layoutY="1224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onay/ Confirmation " />
+            <Text layoutX="753.0" layoutY="1224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Müşteri/ Customer" />
+            <TextField layoutX="199.0" layoutY="1236.0" />
+            <TextField layoutX="369.0" layoutY="1236.0" />
+            <TextField layoutX="534.0" layoutY="1236.0" />
+            <TextField layoutX="712.0" layoutY="1236.0" />
+            <TextField layoutX="199.0" layoutY="1265.0" />
+            <TextField layoutX="369.0" layoutY="1265.0" />
+            <TextField layoutX="535.0" layoutY="1265.0" />
+            <TextField layoutX="712.0" layoutY="1265.0" />
+            <TextField layoutX="199.0" layoutY="1328.0" />
+            <TextField layoutX="369.0" layoutY="1328.0" />
+            <TextField layoutX="534.0" layoutY="1328.0" />
+            <TextField layoutX="712.0" layoutY="1328.0" />
+            <ComboBox fx:id="MuayeneasamasicmboId" layoutX="422.0" layoutY="287.0" prefWidth="150.0" />
+            <TextField fx:id="Rid" alignment="TOP_CENTER" editable="false" layoutX="728.0" layoutY="195.0" />
+            <TextField fx:id="Rid1" alignment="TOP_CENTER" editable="false" layoutX="199.0" layoutY="1295.0" />
+            <TextField fx:id="Rid11" alignment="TOP_CENTER" editable="false" layoutX="369.0" layoutY="1295.0" />
+            <TextField fx:id="Mid111" editable="false" layoutX="232.0" layoutY="804.0" prefHeight="25.0" prefWidth="651.0" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

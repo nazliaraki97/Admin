@@ -67,7 +67,6 @@ public class creatnewemployeeController {
             System.out.println(e.getMessage());
         }
 
-        //    primaryStage.close();
     }
 
 

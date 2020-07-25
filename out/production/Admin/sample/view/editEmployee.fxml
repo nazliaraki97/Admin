@@ -29,7 +29,7 @@
                         <Font size="18.0" />
                     </font>
                 </Label>
-            <Button fx:id="gohome" contentDisplay="CENTER" layoutX="425.0" layoutY="147.0" mnemonicParsing="false" onAction="#goHme" prefHeight="25.0" prefWidth="149.0" text="go Home" />
+            <Button fx:id="gohome" contentDisplay="CENTER" layoutX="425.0" layoutY="147.0" mnemonicParsing="false" onAction="#goHme" prefHeight="25.0" prefWidth="149.0" text="Back to Employees" />
             </children>
         </AnchorPane>
         <Label fx:id="header" contentDisplay="CENTER" layoutX="217.0" layoutY="14.0" text="Update employee">

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.menafterco">
+   <children>
+      <Text layoutX="14.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to create a report please fill the following fields">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="55.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operator id" />
+      <Text layoutX="55.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evaluator id" />
+      <Text layoutX="55.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="onay id" />
+      <Text layoutX="55.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="muayene tarihi" />
+      <Text layoutX="55.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Equipment" />
+      <DatePicker fx:id="MuDp" layoutX="149.0" layoutY="217.0" />
+      <TextField fx:id="OpRepId" layoutX="149.0" layoutY="82.0" />
+      <TextField fx:id="EvRepId" layoutX="149.0" layoutY="121.0" />
+      <TextField fx:id="OnRepId" layoutX="149.0" layoutY="166.0" />
+      <TextField fx:id="EqRepId" layoutX="149.0" layoutY="263.0" />
+      <Label layoutX="56.0" layoutY="321.0" text="report date" />
+      <DatePicker fx:id="dp" layoutX="149.0" layoutY="317.0" />
+      <Button fx:id="creat" layoutX="246.0" layoutY="353.0" mnemonicParsing="false" onAction="#newRepo" text="Creat" />
+   </children>
+</AnchorPane>

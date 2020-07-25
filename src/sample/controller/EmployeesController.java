@@ -1,15 +1,11 @@
 package sample.controller;
 
-import javafx.beans.property.ReadOnlyObjectWrapper;
-import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
+
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -22,22 +18,6 @@ import sample.model.Employee;
 import java.io.IOException;
 
 public class EmployeesController {
-/*
-    @FXML
-    private TableColumn<Employee, String> id;
-
-    @FXML
-    private TableColumn<Employee, String> fn;
-
-    @FXML
-    private TableColumn<Employee, String> ln;
-
-    @FXML
-    private TableColumn<Employee, String> un;
-
-    @FXML
-    private TableColumn<Employee, String> jt;
-*/
 
     @FXML
     private Button ed;
@@ -45,29 +25,7 @@ public class EmployeesController {
     @FXML
     private TableView<Employee> table = new TableView<Employee>();
 
-    /*
-    private final ObservableList<Employee> data =
-            FXCollections.observableArrayList(
-                    new Employee("1", "Smith", "jacob","smith@example.com","admin"),
-                    new Employee("2","Isabella", "Johnson", "isabella.johnson@example.com","emp")
-            );
 
-     */
-
-    /*
- @FXML
- private TableView<Person>
-
- table = new TableView<Person>();
-    private final ObservableList<Person> data =
-            FXCollections.observableArrayList(
-                    new Person("Jacob", "Smith", "jacob.smith@example.com"),
-                    new Person("Isabella", "Johnson", "isabella.johnson@example.com"),
-                    new Person("Ethan", "Williams", "ethan.williams@example.com"),
-                    new Person("Emma", "Jones", "emma.jones@example.com"),
-                    new Person("Michael", "Brown", "michael.brown@example.com")
-            );
-*/
 
     @FXML private AnchorPane ap;
     void goEditScreen(Employee emp){
@@ -122,13 +80,6 @@ public class EmployeesController {
 
     @FXML
     void initialize(){
-        System.out.println(mySQLconn.doSelect());
-        System.out.println("select");
-
-
-
-
-
 
         table.setEditable(true);
 
@@ -163,7 +114,7 @@ public class EmployeesController {
                 new PropertyValueFactory<Employee, String>("jobTitle"));
 
 
-        ObservableList<Employee> data = mySQLconn.doSelect();;
+        ObservableList<Employee> data = mySQLconn.doSelect();
 
 
 
@@ -215,13 +166,6 @@ public class EmployeesController {
 
         actionCol.setCellFactory(cellFactory);
 // END OF DELETE
-
-
-
-
-
-
-
 
 
 
@@ -286,82 +230,6 @@ public class EmployeesController {
         table.setItems(data);
         table.getColumns().addAll(idCol , firstNameCol, lastNameCol, userNameCol,jobCol , actionCol , editingCol);
 
-
-
-
-
-   //     mySQLconn.doSelect();
-/*
-        table.setEditable(true);
-
-        TableColumn id = new TableColumn("ID");
-        id.setMinWidth(100);
-        id.setCellValueFactory(
-                new PropertyValueFactory<Employee, String>("id"));
-
-        TableColumn fn = new TableColumn("First Name");
-        fn.setMinWidth(100);
-        fn.setCellValueFactory(
-                new PropertyValueFactory<Employee, String>("firstName"));
-
-        TableColumn ln = new TableColumn("Last Name");
-        ln.setMinWidth(100);
-        ln.setCellValueFactory(
-                new PropertyValueFactory<Employee, String>("lastName"));
-
-        TableColumn un = new TableColumn("Email");
-        un.setMinWidth(100);
-        un.setCellValueFactory(
-                new PropertyValueFactory<Employee, String>("userName"));
-
-        TableColumn jt = new TableColumn("job");
-        jt.setMinWidth(100);
-        jt.setCellValueFactory(
-                new PropertyValueFactory<Employee, String>("jobtitle"));
-
-        table.setItems(data);
-        table.getColumns().addAll(id, fn, ln,un,jt);
-*/
     }
 
-
-
-
-
-    public static class Person {
-
-        private final SimpleStringProperty firstName;
-        private final SimpleStringProperty lastName;
-        private final SimpleStringProperty email;
-
-        private Person(String fName, String lName, String email) {
-            this.firstName = new SimpleStringProperty(fName);
-            this.lastName = new SimpleStringProperty(lName);
-            this.email = new SimpleStringProperty(email);
-        }
-
-        public String getFirstName() {
-            return firstName.get();
-        }
-
-        public void setFirstName(String fName) {
-            firstName.set(fName);
-        }
-
-        public String getLastName() {
-            return lastName.get();
-        }
-
-        public void setLastName(String fName) {
-            lastName.set(fName);
-        }
-
-        public String getEmail() {
-            return email.get();
-        }
-
-        public void setEmail(String fName) {
-            email.set(fName);
-        }
-    }
 }

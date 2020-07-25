@@ -66,6 +66,7 @@ public class editController implements Initializable {
     @FXML
     private void goHme (ActionEvent event) throws IOException {
         System.out.println("goHome");
+
         Stage stage = null;
         Parent myNewScene = null;
         try{
@@ -116,10 +117,6 @@ public class editController implements Initializable {
 
 
     }
-//    @FXML
-//    void initialize() {
-//
-//        System.out.println(lastname.getText());
-//    }
+
 
 }

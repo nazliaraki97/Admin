@@ -27,7 +27,7 @@ public class LoginController {
 
       loginButton.setOnAction(event ->
       {
-          System.out.println( loginUsername.getText().equals("aaa")  );
+         // System.out.println( loginUsername.getText().equals("aaa")  );
 
           if((loginUsername.getText().equals("admin")) &&  (loginPassword.getText().equals("123"))  ){
               System.out.println("logged");
