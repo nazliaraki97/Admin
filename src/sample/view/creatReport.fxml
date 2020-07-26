@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ScrollPane?>
@@ -14,9 +15,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1374.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CreatReport">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1438.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CreatReport">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1363.0" prefWidth="888.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1440.0" prefWidth="888.0">
          <children>
             <Text layoutX="8.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="müşteri&#10;customer">
                <stroke>
@@ -105,39 +106,39 @@
             <Line endX="720.0" layoutX="173.0" layoutY="484.0" startX="-179.0" />
             <Line endX="720.5" layoutX="173.0" layoutY="532.0" startX="-179.0" />
             <Line endX="713.5" endY="0.5" layoutX="180.0" layoutY="629.0" startX="-179.0" />
-            <TextField fx:id="MusteriTxtId1" alignment="TOP_CENTER" layoutX="129.0" layoutY="359.0" />
-            <TextField fx:id="ProjeadiTxtId1" alignment="TOP_CENTER" layoutX="129.0" layoutY="403.0" />
-            <TextField fx:id="TestyeriTxtId1" alignment="TOP_CENTER" layoutX="129.0" layoutY="450.0" />
-            <TextField fx:id="MuayenestandardiTxtId1" alignment="TOP_CENTER" layoutX="129.0" layoutY="497.0" />
-            <TextField fx:id="DegerlenstandardiTxtId1" alignment="TOP_CENTER" layoutX="129.0" layoutY="543.0" />
+            <TextField fx:id="pdid" alignment="TOP_CENTER" layoutX="129.0" layoutY="359.0" />
+            <TextField fx:id="eqid" alignment="TOP_CENTER" layoutX="129.0" layoutY="403.0" />
+            <TextField fx:id="cmidd" alignment="TOP_CENTER" layoutX="129.0" layoutY="450.0" />
+            <TextField fx:id="mtid" alignment="TOP_CENTER" layoutX="129.0" layoutY="497.0" />
+            <TextField fx:id="liid" alignment="TOP_CENTER" layoutX="129.0" layoutY="543.0" />
             <Line endX="-22.0" endY="25.5" layoutX="435.0" layoutY="604.0" startX="-22.0" startY="-255.5" />
-            <TextField fx:id="MuayeneproseduruTxtId1" alignment="TOP_CENTER" layoutX="422.0" layoutY="358.0" text="KAYNAK+HAZ" />
-            <TextField fx:id="ResimnoTxtId1" alignment="TOP_CENTER" layoutX="422.0" layoutY="449.0" text="1200 Lux" />
-            <TextField fx:id="yuzeydurumuTxtId1" alignment="TOP_CENTER" layoutX="422.0" layoutY="496.0" />
-            <TextField fx:id="MuayeneasamasiTxtId1" alignment="TOP_CENTER" layoutX="422.0" layoutY="545.0" />
+            <TextField fx:id="Muayenebolgesiid" alignment="TOP_CENTER" layoutX="422.0" layoutY="358.0" text="KAYNAK+HAZ" />
+            <TextField fx:id="luxid" alignment="TOP_CENTER" layoutX="422.0" layoutY="449.0" text="1200 Lux" />
+            <TextField fx:id="Muortami" alignment="TOP_CENTER" layoutX="422.0" layoutY="496.0" />
+            <TextField fx:id="Mgi" alignment="TOP_CENTER" layoutX="422.0" layoutY="545.0" />
             <Line endX="-22.0" endY="24.29290771484375" layoutX="143.0" layoutY="604.0" startX="-22.0" startY="-255.5" />
             <Line endX="-22.0" endY="25.5" layoutX="307.0" layoutY="604.0" startX="-22.0" startY="-255.5" />
             <Text layoutX="8.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Işık mesafesi&#10;Distance of Light" />
             <Text layoutX="295.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Isıl İşlem&#10;Heat Treatment" />
-            <TextField fx:id="DegerlenstandardiTxtId11" alignment="TOP_CENTER" layoutX="129.0" layoutY="584.0" />
-            <TextField fx:id="MuayeneasamasiTxtId11" alignment="TOP_CENTER" layoutX="422.0" layoutY="586.0" />
+            <TextField fx:id="difid" alignment="TOP_CENTER" layoutX="129.0" layoutY="584.0" />
+            <TextField fx:id="isiis" alignment="TOP_CENTER" layoutX="422.0" layoutY="586.0" />
             <Line endX="714.0" layoutX="179.0" layoutY="579.0" startX="-179.0" />
             <Text layoutX="585.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yüzey&#10;Surface Condition" />
             <Text layoutX="585.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yüzey Sıcaklığı (ºC)&#10;Surface Temperature" />
             <Text layoutX="585.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muayene Bölgesindeki Alan Şiddeti, kA/m&#10;Gauss Field Strength" wrappingWidth="126.65234375" />
             <Text layoutX="585.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Işık Cihazı Tanımı&#10;Identification of Light Equip." wrappingWidth="132.021484375" />
             <Line endX="-21.28125" endY="23.93359375" layoutX="743.0" layoutY="604.0" startX="-22.0" startY="-255.5" />
-            <TextField fx:id="MuayeneproseduruTxtId11" alignment="TOP_CENTER" layoutX="728.0" layoutY="358.0" />
-            <TextField fx:id="MuayenekapsamiTxtId11" layoutX="728.0" layoutY="410.0" prefHeight="53.0" prefWidth="149.0" text="3.2 kA/m" />
-            <TextField fx:id="yuzeydurumuTxtId11" alignment="TOP_CENTER" layoutX="728.0" layoutY="496.0" text="TAŞLANMIŞ / GRINDING" />
-            <TextField fx:id="MuayeneasamasiTxtId12" alignment="TOP_CENTER" layoutX="728.0" layoutY="545.0" text="***" />
+            <TextField fx:id="sicak" alignment="TOP_CENTER" layoutX="728.0" layoutY="358.0" />
+            <TextField fx:id="muayeneboboid" layoutX="728.0" layoutY="410.0" prefHeight="53.0" prefWidth="149.0" text="3.2 kA/m" />
+            <TextField fx:id="yuzeyid" alignment="TOP_CENTER" layoutX="728.0" layoutY="496.0" text="TAŞLANMIŞ / GRINDING" />
+            <TextField fx:id="isikid" alignment="TOP_CENTER" layoutX="728.0" layoutY="545.0" text="***" />
             <Line endX="-22.0" endY="24.5" layoutX="602.0" layoutY="604.0" startX="-22.0" startY="-255.5" />
             <Text layoutX="585.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kaldırma Testi Tarih / No Lifting Test Date / Number" wrappingWidth="133.71875" />
-            <TextField fx:id="MuayeneasamasiTxtId111" alignment="TOP_CENTER" layoutX="728.0" layoutY="589.0" />
+            <TextField fx:id="ktt" alignment="TOP_CENTER" layoutX="728.0" layoutY="589.0" />
             <Line endX="151.0" endY="744.0" layoutX="743.0" layoutY="614.0" startX="151.0" startY="-629.0" />
-            <ComboBox layoutX="422.0" layoutY="403.0" prefWidth="150.0" />
-            <ComboBox layoutX="128.0" layoutY="104.0" prefWidth="150.0" />
-            <ComboBox layoutX="129.0" layoutY="148.0" prefWidth="150.0" />
+            <ComboBox fx:id="aktiid" layoutX="422.0" layoutY="403.0" prefWidth="150.0" />
+            <ComboBox fx:id="musteriid" layoutX="128.0" layoutY="104.0" prefWidth="150.0" />
+            <ComboBox fx:id="ProjeadiTxtId" layoutX="129.0" layoutY="148.0" prefWidth="150.0" />
             <Line endX="-22.0" endY="-125.5" layoutX="435.0" layoutY="885.0" startX="-22.0" startY="-255.5" />
             <Line endX="-22.0" endY="-14.70709228515625" layoutX="236.0" layoutY="885.0" startX="-22.0" startY="-255.5" />
             <Line endX="261.5" layoutX="632.0" layoutY="657.0" startX="-218.5" />
@@ -221,8 +222,8 @@
             <Text layoutX="367.0" layoutY="1224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Değerlendiren/ Evaluated by " />
             <Text layoutX="554.0" layoutY="1224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onay/ Confirmation " />
             <Text layoutX="753.0" layoutY="1224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Müşteri/ Customer" />
-            <TextField layoutX="199.0" layoutY="1236.0" />
-            <TextField layoutX="369.0" layoutY="1236.0" />
+            <TextField fx:id="opadi" layoutX="199.0" layoutY="1236.0" />
+            <TextField fx:id="evadi" layoutX="369.0" layoutY="1236.0" />
             <TextField layoutX="534.0" layoutY="1236.0" />
             <TextField layoutX="712.0" layoutY="1236.0" />
             <TextField layoutX="199.0" layoutY="1265.0" />
@@ -238,6 +239,8 @@
             <TextField fx:id="Rid1" alignment="TOP_CENTER" editable="false" layoutX="199.0" layoutY="1295.0" />
             <TextField fx:id="Rid11" alignment="TOP_CENTER" editable="false" layoutX="369.0" layoutY="1295.0" />
             <TextField fx:id="Mid111" editable="false" layoutX="232.0" layoutY="804.0" prefHeight="25.0" prefWidth="651.0" />
+            <Button fx:id="toex" layoutX="80.0" layoutY="1380.0" mnemonicParsing="false" onAction="#toexA" text="export to excel" />
+            <Button fx:id="topdf" layoutX="188.0" layoutY="1380.0" mnemonicParsing="false" onAction="#topdfA" text="export to pdf" />
          </children></AnchorPane>
   </content>
 </ScrollPane>

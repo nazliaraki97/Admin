@@ -1,3 +1,5 @@
+//nazli araki 170503107
+
 package sample.controller;
 
 import javafx.fxml.FXML;
@@ -74,13 +76,13 @@ public class creatnewemployeeController {
     void initialize(){
 
        adminjob.setOnAction(event -> {
-           se = "admin" ;
+           se = "operator" ;
            System.out.println("adminjob is : " + adminjob.getText());
            jobtitle.setText(se);
        });
 
         employeejob.setOnAction(event -> {
-            se = "employee" ;
+            se = "evaluator" ;
             System.out.println("employeejob is : " + employeejob.getText());
             jobtitle.setText(se);
 

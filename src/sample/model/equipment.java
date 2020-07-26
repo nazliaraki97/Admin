@@ -1,4 +1,5 @@
 package sample.model;
+//nazli araki 170503107
 
 import javafx.beans.property.SimpleStringProperty;
 
@@ -14,6 +15,16 @@ public class equipment {
 
     public equipment(String p, String e, String c, String m, String l, String d,String i) {
         this.id = new SimpleStringProperty(i);
+
+        this.Pole_Distance = new SimpleStringProperty(p);
+        this.Eq_name =new SimpleStringProperty(e);
+        this.Carrier_Medium =new SimpleStringProperty(c);
+        this.Mag_Tech =new SimpleStringProperty(m);
+        this.Light_Intensity =new SimpleStringProperty(l);
+        this.DistanceofLight =new SimpleStringProperty(d);
+    }
+    public equipment(String p, String e, String c, String m, String l, String d) {
+
 
         this.Pole_Distance = new SimpleStringProperty(p);
         this.Eq_name =new SimpleStringProperty(e);

@@ -1,20 +1,30 @@
 package sample.model;
+//nazli araki 170503107
 
 import javafx.beans.property.SimpleStringProperty;
 
 public class firma {
+    private  SimpleStringProperty id;
+
     private  SimpleStringProperty Costumer;
     private  SimpleStringProperty Project_name;
     private  SimpleStringProperty il_ilce;
     private  SimpleStringProperty job_order_no;
     private  SimpleStringProperty offer_no;
 
-    public firma(String c, String p, String il, String j, String o) {
+    public firma(String c, String p, String il, String j, String o,String i) {
+        this.id = new SimpleStringProperty(i);
+
         this.Costumer =new SimpleStringProperty(c);
         this.Project_name =new SimpleStringProperty(p);
         this.il_ilce =new SimpleStringProperty(il);
         this.job_order_no =new SimpleStringProperty(j);
         this.offer_no =new SimpleStringProperty(o);
+    }
+
+    public firma(String costumer) {
+        this.Costumer =new SimpleStringProperty(costumer);
+
     }
 
     public String getCostumer() {
@@ -48,4 +58,11 @@ public class firma {
         offer_no.set(oo);
     }
 
+    public String getId() {
+        return id.get();
+    }
+
+    public void setId(String gg) {
+        id.set(gg);
+    }
 }

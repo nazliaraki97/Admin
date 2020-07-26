@@ -1,4 +1,5 @@
 package sample.model;
+//nazli araki 170503107
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;

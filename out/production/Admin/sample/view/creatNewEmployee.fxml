@@ -20,8 +20,8 @@
             <Button fx:id="employeecreatnew" contentDisplay="CENTER" layoutX="78.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="creat employee" />
             <MenuButton fx:id="jobtitle" alignment="CENTER" layoutX="152.0" layoutY="103.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="select">
               <items>
-                <MenuItem fx:id="adminjob" mnemonicParsing="false" text="admin" />
-                <MenuItem fx:id="employeejob" mnemonicParsing="false" text="employee" />
+                <MenuItem fx:id="adminjob" mnemonicParsing="false" text="operator" />
+                <MenuItem fx:id="employeejob" mnemonicParsing="false" text="evaluator" />
               </items>
             </MenuButton>
             <Label layoutX="78.0" layoutY="102.0" prefHeight="25.0" prefWidth="75.0" text="job title:">

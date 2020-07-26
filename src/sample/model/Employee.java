@@ -1,4 +1,5 @@
 package sample.model;
+//nazli araki 170503107
 
 import javafx.beans.property.SimpleStringProperty;
 
@@ -22,6 +23,12 @@ public  class Employee {
     public Employee(String fName) {
         this.firstName = new SimpleStringProperty(fName);
 
+    }
+
+    public Employee(String firstname, String lastname,String j) {
+        this.firstName = new SimpleStringProperty(firstname);
+        this.lastName = new SimpleStringProperty(lastname);
+        jobTitle=new SimpleStringProperty(j);
     }
 
     public String getFirstName() {

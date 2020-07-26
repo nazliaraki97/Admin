@@ -1,14 +1,22 @@
 package sample.controller;
+//nazli araki 170503107
 
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import sample.model.equipment;
+
+import java.io.IOException;
 
 public class equipmentController {
     @FXML
@@ -16,8 +24,52 @@ public class equipmentController {
 
     @FXML
     private TableView<equipment> table = new TableView<equipment>();
+    @FXML
+void goHme(ActionEvent event) throws IOException {
+
+    Stage primaryStage = (Stage) ed.getScene().getWindow();
 
 
+    System.out.println("goHome");
+    Stage stage = null;
+    Parent myNewScene = null;
+    try{
+        FXMLLoader f = new FXMLLoader(getClass().getResource("..//view//main.fxml")) ;
+
+        Parent root1 = (Parent) f.load() ;
+
+        Stage primaryStage1 = (Stage) ed.getScene().getWindow();
+        stage = new Stage() ;
+        stage.setTitle("New Employee");
+        stage.setScene(new Scene(root1));
+        stage.show();
+        primaryStage1.close();
+    }catch (Exception e){
+        System.out.println(e.getMessage());
+    }
+}
+    void goEditScreen(equipment eq){
+        System.out.println("eee");
+        Stage stage = null;
+        Parent myNewScene = null;
+        try{
+            FXMLLoader f = new FXMLLoader(getClass().getResource("..//view//editEqu.fxml")) ;
+            editEqcontroller e = new editEqcontroller() ;
+            e.eq = eq ;
+            Parent root1 = (Parent) f.load() ;
+            //    e.fillForm("1111");
+
+
+            Stage primaryStage = (Stage) ed.getScene().getWindow();
+            stage = new Stage() ;
+            stage.setTitle("ddd0");
+            stage.setScene(new Scene(root1));
+            stage.show();
+            primaryStage.close();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
     @FXML
     void initialize(){
 
@@ -25,7 +77,8 @@ public class equipmentController {
         TableColumn idc = new TableColumn("id");
         idc.setMinWidth(100);
         idc.setCellValueFactory(
-                new PropertyValueFactory<equipment, String>("Pole_Distance"));
+                new PropertyValueFactory<equipment, String>("id"));
+
         TableColumn pd = new TableColumn("Pole_Distance");
         pd.setMinWidth(100);
         pd.setCellValueFactory(
@@ -86,7 +139,7 @@ public class equipmentController {
                                 btn.setOnAction(event -> {
                                     System.out.println("delete row : " + table.getItems().get(getIndex()).getId() );
 
-                                    mySQLconn.doDelete(table.getItems().get(getIndex()).getId()) ;
+                                    mySQLconn.doDeletei(table.getItems().get(getIndex()).getId()) ;
                                     table.getItems().remove(getIndex());
                                 });
                             }
@@ -173,7 +226,7 @@ public class equipmentController {
 
 
         table.setItems(data);
-        table.getColumns().addAll(idCol , firstNameCol, lastNameCol, userNameCol,jobCol , actionCol , editingCol);
+        table.getColumns().addAll( pd, en, cm,mt,li,disofl , actionCol , editingCol,idc);
 
     }
 }

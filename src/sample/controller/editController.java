@@ -1,4 +1,5 @@
 package sample.controller;
+//nazli araki 170503107
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -84,8 +85,6 @@ public class editController implements Initializable {
             System.out.println(e.getMessage());
         }
 
-        //    stage = (Stage) ed.getScene().getWindow();
-        //    myNewScene = FXMLLoader.load(getClass().getResource("src\\sample\\view\\login.fxml"));
     }
 
     @Override
@@ -95,13 +94,13 @@ public class editController implements Initializable {
 
 
         adminjob.setOnAction(event -> {
-            se = "admin" ;
+            se = "operator" ;
             System.out.println("adminjob is : " + adminjob.getText());
             jobtitle.setText(se);
         });
 
         employeejob.setOnAction(event -> {
-            se = "employee" ;
+            se = "evaluator" ;
             System.out.println("employeejob is : " + employeejob.getText());
             jobtitle.setText(se);
 

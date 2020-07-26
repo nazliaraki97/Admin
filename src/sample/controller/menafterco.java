@@ -1,5 +1,8 @@
 package sample.controller;
+//nazli araki 170503107
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +12,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.model.Employee;
+import sample.model.equipment;
 
 import java.net.URL;
 import java.time.format.DateTimeFormatter;
@@ -41,6 +46,30 @@ public class menafterco {
     @FXML
     void newRepo(ActionEvent event){
 
+
+            mySQLconn o2 = new mySQLconn() ;
+            o2.doSert(EqRepId.getText()) ;
+
+        ObservableList <equipment> data = FXCollections.observableArrayList(o2.doSert(EqRepId.getText()));
+
+        mySQLconn o3 = new mySQLconn() ;
+        o2.doSert1(EvRepId.getText()) ;
+        ObservableList <Employee> dataa = FXCollections.observableArrayList(o2.doSert1(EvRepId.getText()));
+      /*  if(dataa.get(2).getJobTitle()=="evaluator"){
+
+        }else {
+            dataa=null;
+        }*/
+
+        mySQLconn o4 = new mySQLconn() ;
+        o2.doSert2(OpRepId.getText()) ;
+        ObservableList <Employee> dataaa = FXCollections.observableArrayList(o2.doSert2(OpRepId.getText()));
+       /* if(dataaa.get(2).getJobTitle()=="operator"){
+
+        }else {
+            dataaa=null;
+        }*/
+
         System.out.println("go repyy");
         Stage stage = null;
         Parent myNewScene = null;
@@ -53,9 +82,15 @@ public class menafterco {
             String date1 = MuDp.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
             System.out.println(date);
+            CreatReport cr2 =f.getController();
 
+            CreatReport cr1 =f.getController();
             CreatReport cr =f.getController();
             cr.myfun(date,date1);
+            cr1.myfun1(data);
+
+            cr2.myfun2(dataa,dataaa);
+
 
 
             Stage primaryStage = (Stage) creat.getScene().getWindow();
@@ -70,6 +105,7 @@ public class menafterco {
         }
 
     }
+
     public void initialize(URL location, ResourceBundle resources) {
 
 
